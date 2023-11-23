@@ -32,7 +32,7 @@ public class Customer {
 
    public int getAccount_num() {
       // creates a random account number
-      account_num = RadomAccountNum.nextInt(24500000,24599999);
+      account_num = 24500000 + RadomAccountNum.nextInt(99999); 
       customersAccountNum.add(account_num);
       return account_num;
    }

@@ -2,13 +2,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
-
 public class RandomBankStatementDate {
     
-    public Date getRandom_Date() {
+    public Date getRandomDate() {
         // Set the range of years for random date generation
-        int startYear = 2000;
-        int endYear = 2023;
+        int startYear = 2023;
+        int endYear = 2030;
 
         // Create a Calendar instance and set it to a random date within the specified range
         Calendar calendar = Calendar.getInstance();

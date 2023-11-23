@@ -8,6 +8,8 @@ public class BankAccount {
    private double total;
    public double resetBalance;
    public double amount;
+   String error = "\u001B[41m";
+   String resetColor = "\u001B[0m";
 
    Scanner input = new Scanner(System.in);
 
@@ -23,7 +25,7 @@ public class BankAccount {
             validInput = true;
          } else {
             input.next();
-            System.out.println("Invalid input. Please enter a valid amount.");
+            System.out.println(error + "Invalid input. Please enter a valid amount"+ resetColor);
          }
       }
       return this.deposits;
@@ -41,7 +43,7 @@ public class BankAccount {
             validInput = true;
          } else {
             input.next();
-            System.out.println("Invalid input. Please enter a valid amount");
+            System.out.println(error + "Invalid input. Please enter a valid amount"+ resetColor);
          }
       }
       return this.withdrawals;
@@ -56,9 +58,10 @@ public class BankAccount {
          if (input.hasNextDouble()) {
             this.amount = input.nextDouble();
             this.transfers += this.amount;
+            validInput = true;
          } else {
             input.next();
-            System.out.println("Invalid input. Pease enter a valid amount");
+            System.out.println(error + "Invalid input. Please enter a valid amount"+ resetColor);
          }
       }
       return this.transfers;

@@ -4,7 +4,7 @@ public class Bank {
 
    public String getBank_name() {
       // FABIAN MERGED START
-      Bank_name = ("\n                MOUNTAIN AMERICA CREDIT UNION \n");
+      Bank_name = ("\n|                MOUNTAIN AMERICA CREDIT UNION \t\t|\r\n");
       return Bank_name;
       // FABIAN MERGED END
    }
