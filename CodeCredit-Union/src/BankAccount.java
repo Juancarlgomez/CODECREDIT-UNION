@@ -24,6 +24,7 @@ public class BankAccount {
     }
 
     public double getTotal() {
+        total = (total + deposits) - (withdrawals + transfers);
         return total;
     }
 }

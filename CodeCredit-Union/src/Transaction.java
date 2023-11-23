@@ -3,6 +3,7 @@ public class Transaction {
     private String type;
    private String sender;
    private double amount;
+
    char select;
    Scanner input = new Scanner(System.in);
 
@@ -36,13 +37,34 @@ public class Transaction {
    }
 
    public String getSender() {
-      System.out.println("Enter the sender's Full Name");
-      sender = input.next();
+      if (type.equals("Transfer")) {
+
+
+      System.out.println("Enter the sender's Full Name:" +input.nextLine()); //input.nextLine(); is broken down bellow
+      sender = input.nextLine();
       return sender;
+      }
+      else {
+         return null; //  fix this to return nothing
+      }
    }
 
    public double getAmount() {
       System.out.println("Enter the amount");
+      System.out.print("$");
+
+      if (type.equals("Deposit")) {
+         amount = input.nextDouble();
+         return amount;
+      }
+      else if (type.equals("Withdrawal")) {
+         amount = input.nextDouble();
+         return amount;
+      }
+      else if (type.equals("Transfer")) {
+         amount = input.nextDouble();
+         return amount;
+      }
       amount = input.nextDouble();
       return amount;
    }
