@@ -2,7 +2,7 @@
 public class Main {
    public static void main(String[] args) {
 
-      // creates the boolean for looping
+      // creates the boolean for looping 
       boolean quit = false;
 
       // FABIAN MERGED START
