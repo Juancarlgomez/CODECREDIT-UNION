@@ -33,14 +33,17 @@ public class Main {
          // now using the correct .equals() for comparison instead of ==.
          if (type.equals("Transfer")) {
             transaction.getSender();
+            // Larissa's Message,is merged within one print statement.
             System.out.printf("Transfer successful! %nTotal Transferred: $%.2f%n", myAccount.getTransfers());
          }
 
          else if (type.equals("Withdrawal")) {
+            // Larissa's Message,is merged within one print statement.
             System.out.printf("Withdrawal successful! %nTotal Withdrew: $%.2f%n", myAccount.getWithdrawals());
          }
 
          else if (type.equals("Deposit")) {
+            // Larissa's Message,is merged within one print statement.
             System.out.printf("Deposit successful! %nTotal Deposited: $%.2f%n", myAccount.getDeposits());
          }
 
@@ -86,15 +89,18 @@ public class Main {
             System.out.print("Account Number: " + customer.customersAccountNum.get(i)+"\t|\r\n");
          } else {
             //prints full last name if first name is > 5 characters long
-         System.out.print(customer.customersLastName.get(i)+"\t");
-         System.out.print("Account Number: " + customer.customersAccountNum.get(i) + "\t|\r\n");
+            System.out.print(customer.customersLastName.get(i)+"\t");
+            System.out.print("Account Number: " + customer.customersAccountNum.get(i) + "\t|\r\n");
          }
       
-         System.out.println("|Type: " + transaction.typeArray.get(i)+ "\t\t\t\t\t\t|\r\n|\t\t\t\t\t\t\t|");
+         if (!transaction.typeArray.isEmpty()){
+            System.out.println("|Type: " + transaction.typeArray.get(i)+ "\t\t\t\t\t\t|\r\n|\t\t\t\t\t\t\t|");
+         }
       
-      
-         System.out.printf("|\t\t\t\tTotal Balance $%.2f\t|\r%n", customer.customersBalance.get(i));
-   }
+         if (!customer.customersBalance.isEmpty()){ // larissa's code checks if balance is empty
+            System.out.printf("|\t\t\t\tTotal Balance $%.2f\t|\r%n", customer.customersBalance.get(i));
+         }
+      }
       System.out.print("|_______________________________________________________|\r\n");
 
    }
